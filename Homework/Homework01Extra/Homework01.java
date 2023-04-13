@@ -5,13 +5,14 @@ import java.util.List;
 
 public class Homework01 {
     public static void main(String[] args) {
-        // Using Array
+        // Using Array =============================================================
         int[] inputArray = new int[]{1, 1, 1, 1};
         int[] resultArray = sequenceArray(inputArray, 9);
 //        System.out.println(Arrays.toString(sequenceArray(inputArray, 5)));
+        System.out.println("\nSolution with Array usage:");
         countsArray(resultArray, 5, 7);
 
-        // Using List
+        // Using List =============================================================
         List<Integer> inputList = new ArrayList<>();
         inputList.add(1);
         inputList.add(1);
@@ -19,11 +20,13 @@ public class Homework01 {
         inputList.add(1);
         List<Integer> resultList = sequenceList(inputList, 9);
 //        System.out.println(sequenceList(inputList, 5));
+        System.out.println("\nSolution with List usage:");
         countsList(resultList, 5, 7);
 
         Tree tree = new Tree();
         tree.fill(9);
 
+        // =========================================================================
 
     }
     // Array method
@@ -54,7 +57,7 @@ public class Homework01 {
                 count2++;
             }
         }
-        System.out.printf("\nNumber %d appears %d times;\nNumber %d appears %d times.", value1, count1, value2, count2);
+        System.out.printf("Number %d appears %d times;\nNumber %d appears %d times.\n", value1, count1, value2, count2);
     }
 
     // List method
@@ -65,9 +68,7 @@ public class Homework01 {
         for (int i = 2; i <= row; i++) {
             for (int j = 0; j < input.size(); j++) {
                 temp.add(input.get(j));
-//                System.out.println(input.get(j));
                 temp.add(input.get(j) + 1);
-//                System.out.println(input.get(j) + 1);
             }
             if(i == row) {
                 resultList = temp;
@@ -79,6 +80,7 @@ public class Homework01 {
         return resultList;
     }
 
+    //List method results
     private static void countsList(List<Integer> list, int value1, int value2) {
         int count1 = 0;
         int count2 = 0;
@@ -89,7 +91,7 @@ public class Homework01 {
                 count2++;
             }
         }
-        System.out.printf("\nNumber %d appears %d times;\nNumber %d appears %d times.", value1, count1, value2, count2);
+        System.out.printf("Number %d appears %d times;\nNumber %d appears %d times.\n", value1, count1, value2, count2);
     }
 
 }
