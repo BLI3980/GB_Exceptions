@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Seminar02 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         /*
         Обработайте возможные исключительные ситуации. "Битые" значения в исходном массиве
         считайте нулями. Можно внести в код правки, которые считаете необходимыми.
@@ -127,8 +127,9 @@ public class Seminar02 {
         }
     }
 
-    public static void writeHashmapToFile(HashMap<String, Integer> input, String fileName) {
-        try (FileWriter fileWriter = new FileWriter(fileName, false)) {
+    public static void writeHashmapToFile(HashMap<String, Integer> input, String fileName) throws IOException {
+        FileWriter fileWriter = new FileWriter(fileName, false);
+        try {
             input.forEach((k, v) -> {
                 try {
                     fileWriter.write(k + " = " + v);
@@ -141,7 +142,6 @@ public class Seminar02 {
         } catch (Exception e) {
             System.out.println("Write to file exception: " + e.getMessage());
         }
-
     }
 
 
