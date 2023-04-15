@@ -127,9 +127,9 @@ public class Seminar02 {
         }
     }
 
-    public static void writeHashmapToFile(HashMap<String, Integer> input, String fileName) throws IOException {
-        FileWriter fileWriter = new FileWriter(fileName, false);
-        try {
+    public static void writeHashmapToFile(HashMap<String, Integer> input, String fileName) {
+
+        try (FileWriter fileWriter = new FileWriter(fileName, false)) {
             input.forEach((k, v) -> {
                 try {
                     fileWriter.write(k + " = " + v);
@@ -138,7 +138,7 @@ public class Seminar02 {
                     throw new RuntimeException(e);
                 }
             });
-            fileWriter.close();
+//            fileWriter.close();
         } catch (Exception e) {
             System.out.println("Write to file exception: " + e.getMessage());
         }
@@ -210,4 +210,5 @@ public class Seminar02 {
 
         writer.close();
     }
+
 }
