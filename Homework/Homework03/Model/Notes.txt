@@ -1,0 +1,22 @@
+Checks to be done:
+1. Check amount of data:
+    Return Error code, if user is more or less than required was provided;
+    Notify user and ask to provide data again.
+
+2. Check correctness of format for each data field:
+    2.1 Name, surname, patronymic name - strings;
+        2.1.1 Must not include any characters other than cyrillic or latin letters
+        2.1.1 Include toTitle conversion;
+    2.2 Date of birth - string;
+        2.2.1 String format - dd.mm.yyyy;
+    2.3 Phone number - 11 digits integer number;
+    2.4 Gender - char F or M, nothing else;
+    Corresponding Exceptions to be thrown and handled accordingly;
+    Notify user and ask to provide data again.
+
+3.  Create a file, if user data is correct:
+    3.1 The name of file to be equal to provided surname;
+        3.1.1 For multiple user data with identical surnames, the same
+        file to be used and data recorded in separate lines;
+        3.1.1 Data record format to be as follows:
+        <Surname><Firstname><PatronymicName><dateOfBirth><phoneNumber><gender>
