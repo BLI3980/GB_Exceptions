@@ -31,9 +31,9 @@ public class Main {
         // try-catch ==================================================
         int number = 1;
         try {
-            number = 10 / 1;
-            String test = null;
-//            System.out.println(test.length());
+//            number = 10 / 0;
+//            String test = null;
+//            System.out.println("test length is: " + test.length());
             Collections.emptyList().add(new Object());
         } catch (ArithmeticException e) {
             System.out.println("Exception: Operation divide by zero not supported");
@@ -42,7 +42,7 @@ public class Main {
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         }
-        System.out.println(number); // 1
+//        System.out.println(number); // 1
 
         // finally ==================================================
         FileReader test = null;

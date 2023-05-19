@@ -28,6 +28,9 @@ public class Seminar02 {
         Если на каком-то месте встречается символ, отличный от числа или "?", бросить
         подходящее исключение. Записать в тот же файл данные с замененными символами "?".
          */
+
+        // ==========================================================================
+        // My code:
         File file = new File("./Seminars/Seminar02/dataFile.csv");
         System.out.println(file.getAbsolutePath());
         HashMap<String, String > map =  readFileIntoHashmap(file);
@@ -47,6 +50,8 @@ public class Seminar02 {
 
     }
 
+    // ==========================================================================
+    // My code:
     public static int sumZeros(String[][] array) {
         int sum = 0;
         int value;

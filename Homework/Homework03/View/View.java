@@ -10,21 +10,29 @@ public class View {
 
     public void intro() {
         separator();
-        System.out.println("WELCOME TO USER DETAILS HANDLING PROGRAM.");
-        System.out.println("The following input details are required for this program:" +
-                "1. First name;" +
-                "2. Second name;" +
-                "3. Patronymic name;" +
-                "4. Date of birth (format: dd.mm.yyyy);" +
-                "5. Phone number (format: 12345678901);" +
-                "6. Gender (format: F/M).");
+        System.out.println("\tWELCOME TO USER DETAILS HANDLING PROGRAM.");
+        System.out.println("The following input details are required for this program:\n" +
+                "\t1. First name;\n" +
+                "\t2. Second name;\n" +
+                "\t3. Patronymic name;\n" +
+                "\t4. Date of birth (format: dd.mm.yyyy);\n" +
+                "\t5. Phone number (format: 12345678901);\n" +
+                "\t6. Gender (format: F/M).\n");
         System.out.println("The details can be entered in any order, but must be separated by space.");
         separator();
     }
 
     public String getUserDetails() {
-        String userInput = prompt("Please enter the details here: ");
+        String userInput = prompt("Please enter the details here below: \n");
         return userInput;
+    }
+
+    public void dataIncomplete() {
+        attention();
+        separator();
+        System.out.println("You have either missed something out or provided something extra details." +
+                "\nPlease check again and try again.");
+        separator();
     }
 
     public String prompt(String message) {
@@ -33,10 +41,15 @@ public class View {
         return userInput.nextLine();
     }
 
+    private void attention() {
+        System.out.println("\t\t\tATTENTION!");
+    }
+
     public void separator() {
         for (int i = 0; i < 75; i++) {
             System.out.print("-");
         }
+        System.out.println();
     }
 
 //    public String[] fields() {

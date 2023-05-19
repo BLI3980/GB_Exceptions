@@ -21,16 +21,16 @@ public class Seminar01 {
         int[] array2 = new int[] {9, 3, 6, 23, 17};
 
         try {
-//            System.out.println(findValue(array1, 4));
-//            System.out.println(findValue(array2, 18));
-//            System.out.println(findValue(null, 4));
-            System.out.println(findValue(array2, 23));
+//            System.out.println(findValue(array1, 4));  // Error code: -1. Array length less than minimum required.
+//            System.out.println(findValue(array2, 18));  // Error code: -2. Value not found.
+//            System.out.println(findValue(null, 4));  // Error code: -3. Array does not contain any values as it is null.
+            System.out.println("The index of searched element is: " + findValue(array2, 23));
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
         System.out.println();
         /*
-        Same as before but for two-dimentional array ==========================
+        Same as before but for two-dimensional array ==========================
          */
         System.out.println("Array3:");
         int[][] array3 = fillAndPrint2DArray(2, 2);
