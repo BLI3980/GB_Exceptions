@@ -30,8 +30,9 @@ public class View {
     public void dataIncomplete() {
         attention();
         separator();
-        System.out.println("You have either missed something out or provided something extra details." +
-                "\nPlease check again and try again.");
+        System.out.println("Error code: -1: You have either missed something out " +
+                "or provided some extra details." +
+                "\nPlease check and try again.");
         separator();
     }
 
