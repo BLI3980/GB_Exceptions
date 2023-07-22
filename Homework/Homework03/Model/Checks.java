@@ -9,8 +9,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class Checks {
-    // TODO: should really put such variable outside somewhere in configs.
-    int amountOfFields = 6;
+    int amountOfFields = Config.AMOUNT_OF_FIELDS;
 
     /**
      * Method checks if provided by user information has required amount of fields
@@ -136,12 +135,8 @@ public class Checks {
      * @throws IncorrectInputFormatException Method throws an exception, if input data is of incorrect format.
      */
     public boolean isCorrectDateFormat(String date) throws IncorrectInputFormatException {
-//        boolean isCorrectLength = date.length() == 10;
-//        boolean isNumeric = date.replace(".", "").chars().allMatch(Character::isDigit);
         boolean containsDots = (date.charAt(2) == '.' && date.charAt(5) == '.');
-
-        // TODO: should really put such variable outside somewhere in configs.
-        int dateLength = 10;
+        int dateLength = Config.DATE_LENGTH;
 
         if (!isCorrectLength(date, dateLength)) {
             throw new IncorrectInputFormatException("Either less or more than needed is typed in \""
@@ -165,8 +160,7 @@ public class Checks {
      * @throws InvalidDateException Method throws InvalidDateException if provided date is in future.
      */
     public boolean isValidBirthDate(String date) throws ParseException, InvalidDateException {
-        //TODO: need to put date format variable somewhere in configs.
-        String dateFormat = "dd.MM.yyyy";
+        String dateFormat = Config.DATE_FORMAT;
         try {
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat(dateFormat);
             simpleDateFormat.setLenient(false);
@@ -189,8 +183,7 @@ public class Checks {
      * @throws IncorrectInputFormatException Method throws an exception if provied phone number is of incorrect format.
      */
     public boolean isCorrectPhoneFormat(String phone) throws IncorrectInputFormatException {
-        // TODO: should really put such variable outside somewhere in configs.
-        int phoneLength = 11;
+        int phoneLength = Config.PHONE_LENGTH;
         if (!isNumeric(phone)) {
             throw new IncorrectInputFormatException("Phone number must contain only digits. " +
                                                     "For example: 12345678901.");
@@ -213,8 +206,7 @@ public class Checks {
      * @throws IncorrectInputFormatException Method throws an exception if provided gender is of incorrect format
      */
     public boolean isCorrectGenderFormat(String gender) throws IncorrectInputFormatException {
-        // TODO: should really put such variable outside somewhere in configs.
-        int genderLength = 1;
+        int genderLength = Config.GENDER_LENGTH;
         boolean isLowerCase = gender.charAt(0) == gender.toLowerCase().charAt(0);
         if (!isLatinLetter(gender) || !isLowerCase || !isCorrectLength(gender, genderLength)
             || (gender.charAt(0) != 'm' && gender.charAt(0) != 'f')) {
