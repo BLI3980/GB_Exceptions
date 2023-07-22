@@ -1,11 +1,11 @@
 Checks to be done:
 1. Check amount of data:
-    Return Error code, if user is more or less than required was provided;
+    Return Error code, if user provided more or less than required;
     Notify user and ask to provide data again.
 
 2. Check correctness of format for each data field:
     2.1 Name, surname, patronymic name - strings;
-        2.1.1 Must not include any characters other than cyrillic or latin letters
+        2.1.1 Must not include any characters other than latin letters
         2.1.1 Include toTitle conversion;
     2.2 Date of birth - string;
         2.2.1 String format - dd.mm.yyyy;

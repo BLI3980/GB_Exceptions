@@ -12,13 +12,13 @@ public class View {
         separator();
         System.out.println("\tWELCOME TO USER DETAILS HANDLING PROGRAM.");
         System.out.println("The following input details are required for this program:\n" +
-                "\t1. First name;\n" +
-                "\t2. Second name;\n" +
+                "\t1. Surname;\n" +
+                "\t2. Name;\n" +
                 "\t3. Patronymic name;\n" +
                 "\t4. Date of birth (format: dd.mm.yyyy);\n" +
                 "\t5. Phone number (format: 12345678901);\n" +
-                "\t6. Gender (format: F/M).\n");
-        System.out.println("The details can be entered in any order, but must be separated by space.");
+                "\t6. Gender (format: f/m).\n");
+        System.out.println("The details must be in this specific order, separated by space.");
         separator();
     }
 
@@ -53,15 +53,7 @@ public class View {
         System.out.println();
     }
 
-//    public String[] fields() {
-//        String[] fields = new String[]{
-//                "Enter the first name: ",
-//                "Enter the second name: ",
-//                "Enter the patronymic name: ",
-//                "Enter the date of birth: ",
-//                "Enter the phone number: ",
-//                "Enter the gender: "
-//        };
-//        return fields;
-//    }
+
+
+
 }
