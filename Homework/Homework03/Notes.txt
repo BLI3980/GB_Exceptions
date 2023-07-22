@@ -9,8 +9,10 @@ Checks to be done:
         2.1.1 Include toTitle conversion;
     2.2 Date of birth - string;
         2.2.1 String format - dd.mm.yyyy;
-    2.3 Phone number - 11 digits integer number;
-    2.4 Gender - char F or M, nothing else;
+	2.2.2 Date must be valid, i.e. to be existing calendar date;
+	2.2.3 Birthdate must be in past, i.e. cannot be in future;
+    2.3 Phone number - 11 digits long number, unsigned;
+    2.4 Gender - char 'f' or 'm', nothing else;
     Corresponding Exceptions to be thrown and handled accordingly;
     Notify user and ask to provide data again.
 
